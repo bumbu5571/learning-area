@@ -99,6 +99,7 @@
   <body>
     <header>
       <h1>Mozilla</h1>
+      <img src="firefox_logo-only_RGB120px.png" alt="Firefox logo">
       <!-- insert <img> element, link to the small
           version of the Firefox logo -->
 
@@ -106,6 +107,13 @@
 
     <main>
       <article>
+        <iframe width="400" height="315" 
+        src="https://www.youtube.com/embed/ojcNcvb1olg?si=p2OYrqfBtwg4Nfo5" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
         <!-- insert iframe from youtube -->
 
         <h2>Rocking the free web</h2>
@@ -118,21 +126,48 @@
       <div class="further-info">
         <!-- insert images with srcsets and sizes -->
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
+          <img
+            srcset="
+            firefox_logo-only_RGB120px.png 120w,
+            firefox_logo-only_RGB400px.png 400w,
+            "
+            sizes="(max-width: 500px) 120px,
+                      400px"
+            src="firefox_logo-only_RGB400px.png"
+            alt="Firefox logo">
         </a>
         <a href="https://www.mozilla.org/">
-          <img>
+          <img
+            srcset="
+            mozilla-dinosaur-head120px.png 120w,
+            mozilla-dinosaur-head400px.png 400w
+            "
+            sizes="(max-width: 500px) 120px,
+            400px"
+            src="mozilla-dinosaur-head400px.png"
+            alt="Learn more about Mozilla">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img>
+          <img
+            srcset="
+            firefox-addons120px.jpg 120w,
+            firefox-addons400px.jpg 400w
+            "
+            sizes="(max-width: 500px) 120px,
+            400px"
+            alt="Customize Firefox with add-ons">
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
+          <img src="mdn.svg" role="img" alt="Learn web development with MDN">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
+        <picture>
+          <source media="(max-width: 600px)" srcset="red-panda600px.jpg">
+          <img src="red-panda1200px.jpg" alt="a red panda">
+        </picture>
         <!-- insert picture element -->
       </div>
 
